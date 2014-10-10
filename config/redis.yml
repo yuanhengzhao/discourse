@@ -1,11 +1,18 @@
 defaults: &defaults
-  host: <%= GlobalSetting.redis_host %>
-  port: <%= GlobalSetting.redis_port %>
-  password: <%= GlobalSetting.redis_password %>
-  db: <%= GlobalSetting.redis_db %>
+  uri: redis://localhost:6379
+  host: localhost
+  port: 6379
+  password:
+  db: 0
+  cache_db: 2
 
-development:
-  <<: *defaults
+developmiit:
+  uri: redis://localhost:6379
+  host: localhost
+  port: 6379
+  password:
+  db: 0
+  cache_db: 2
 
 profile:
   <<: *defaults

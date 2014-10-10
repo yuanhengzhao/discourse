@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: discourse_development
+  database: d8660091
   min_messages: warning
   pool: 5
   timeout: 5000

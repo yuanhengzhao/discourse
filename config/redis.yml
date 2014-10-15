@@ -4,8 +4,13 @@ defaults: &defaults
   password: 
   db: discourse
 
-development:
-  <<: *defaults
+developmiit:
+  uri: redis://localhost:6379
+  host: localhost
+  port: 6379
+  password:
+  db: 0
+  cache_db: 2
 
 profile:
   <<: *defaults

@@ -32,7 +32,7 @@ Discourse::Application.configure do
   config.handlebars.precompile = false
 
   # we recommend you use mailcatcher https://github.com/sj26/mailcatcher
-  config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
+  config.action_mailer.smtp_settings = { address: "email-smtp.us-west-2.amazonaws.com", port: 25, user_name: 'AKIAITKNBAA6KDJ7O3QQ', password: 'AmYqM2/uf5o8r1CbmdaawUmRjQ8xPV2TTmhqRNr6XZEf', authentication: 'login', enable_starttls_auto: true }
 
   config.action_mailer.raise_delivery_errors = true
 

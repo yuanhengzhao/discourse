@@ -1,8 +1,8 @@
 defaults: &defaults
-  host: <%= GlobalSetting.redis_host %>
-  port: <%= GlobalSetting.redis_port %>
-  password: <%= GlobalSetting.redis_password %>
-  db: <%= GlobalSetting.redis_db %>
+  host: discourse.ywzq4o.0001.usw2.cache.amazonaws.com
+  port: 6379
+  password: 
+  db: discourse
 
 development:
   <<: *defaults

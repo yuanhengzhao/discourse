@@ -1,15 +1,30 @@
 development:
   adapter: postgresql
-  database: discourse_development
+  database: Discourse
   min_messages: warning
+  username: Discourse
+  password: Discourse
   pool: 5
   timeout: 5000
+  host: "discourse.cpz9i1duv2vz.us-west-2.rds.amazonaws.com"
   host_names:
     ### Don't include the port number here. Change the "port" site setting instead, at /admin/site_settings.
     ### If you change this setting you will need to
     ###   - restart sidekiq if you change this setting
     ###   - rebake all to posts using: `RAILS_ENV=production bundle exec rake posts:rebake`
-    - "localhost"
+    - "54.69.7.56"
+
+production:
+  adapter: postgresql
+  database: Discourse
+  min_messages: warning
+  username: Discourse
+  password: Discourse
+  pool: 5
+  timeout: 5000
+  host: "discourse.cpz9i1duv2vz.us-west-2.rds.amazonaws.com"
+  host_names: 
+  - "54.69.7.56"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

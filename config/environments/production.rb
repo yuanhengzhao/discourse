@@ -11,6 +11,7 @@ Discourse::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = GlobalSetting.serve_static_assets
+  config.serve_static_assets = true
 
   config.assets.js_compressor  = :uglifier
   config.assets.css_compressor = :sass
@@ -39,6 +40,7 @@ Discourse::Application.configure do
     settings[:openssl_verify_mode] = GlobalSetting.smtp_openssl_verify_mode if GlobalSetting.smtp_openssl_verify_mode
 
     config.action_mailer.smtp_settings = settings.reject{|_, y| y.nil?}
+    config.action_mailer.default_options(from: 'd8660091@gmail.com');
   else
     config.action_mailer.delivery_method = :sendmail
     config.action_mailer.sendmail_settings = {arguments: '-i'}

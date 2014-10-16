@@ -1,16 +1,14 @@
 defaults: &defaults
   host: discourse.ywzq4o.0001.usw2.cache.amazonaws.com
   port: 6379
-  password: 
-  db: discourse
+  password:
+  db: 0
 
-developmiit:
-  uri: redis://localhost:6379
+development:
   host: localhost
   port: 6379
   password:
   db: 0
-  cache_db: 2
 
 profile:
   <<: *defaults
